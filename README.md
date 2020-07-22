@@ -45,6 +45,8 @@
 - 해커가 naver라고 주장하면서 자기의 공개키를 보내면 해커의 공개키와 naver의 공개키를 어떻게 구분할 수 있을까?
 - CA(Certificate Authority, 인증기관)라고 부르는 인증 노드를 활용한 SSL/TLS 프로토콜 사용
 
+### Reference Works
+
 [하이퍼레저 인디 홈페이지](https://hyperledger-indy.readthedocs.io/projects/sdk/en/stable/docs/build-guides/index.html)<br>
 [indy-sdk:readme](https://github.com/hyperledger/indy-sdk/blob/master/README.md#how-to-start-local-nodes-pool-with-docker)<br>
 [indy-sdk:docker](https://github.com/hyperledger/indy-sdk/blob/master/libindy/ci/ubuntu.dockerfile)<br>
@@ -53,3 +55,16 @@
 [indy-node](https://github.com/hyperledger/indy-node#about-indy-node)<br>
 [tutorial](https://github.com/IBM-Blockchain-Identity/indy-ssivc-tutorial)<br>
 
+## 02. 공부 순서
+
+### INTRO
+
+#### [What is Hyperledger Indy.](https://www.hyperledger.org/use/hyperledger-indy)<br>
+
+### INDY SDK
+
+#### 1. [Readme.md](https://github.com/hyperledger/indy-sdk)
+
+### INDY NODE
+
+#### 1. [Readme.md](https://github.com/hyperledger/indy-node#about-indy-node)
