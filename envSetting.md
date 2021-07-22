@@ -96,7 +96,10 @@ wget --version
 ```
 
 #### docker
-[click](./background/docker/01.설치.md)
+[how to install](./background/docker/docker(install).md)
+
+[how to use](./background/docker/docker(usage).md)
+
 
 #### [node.js SDK] Python 2.7버전 있는지 확인
 ```
@@ -125,3 +128,81 @@ sudo apt-get install build-essential
 
 ### 🍀Hyperledger Indy
 
+#### Indy SDK Repository 가져오기
+
+```cmd
+https://github.com/hyperledger/indy-sdk
+```
+
+#### Indy 노드풀 실행
+https://github.com/hyperledger/indy-sdk/blob/master/README.md#how-to-start-local-nodes-pool-with-docker
+
+```cmd
+docker build -f ci/indy-pool.dockerfile -t indy_pool .
+docker run -itd -p 9701-9708:9701-9708 indy_pool
+```
+
+#### Indy SDK 빌드하기 (`libindy.so`)
+https://github.com/hyperledger/indy-sdk/blob/master/docs/build-guides/ubuntu-build.md
+
+1. Install Rust and rustup
+
+https://forge.rust-lang.org/infra/other-installation-methods.html
+
+```cmd
+curl https://sh.rustup.rs -sSf | sh
+rustc --version
+```
+```
+rustup toolchain install 1.51.0
+```
+
+2. Install required native libraries and utilities:
+
+```cmd
+sudo apt-get update && \
+sudo apt-get install -y \
+   build-essential \
+   pkg-config \
+   cmake \
+   libssl-dev \
+   libsqlite3-dev \
+   libzmq3-dev
+   libncursesw5-dev
+```
+3. libindy requires the modern 1.0.14 version of libsodium but Ubuntu 16.04 does not support installation it's from apt repository. Because of this, it requires to build and install libsodium from source:
+
+```cmd
+cd /tmp 
+curl https://download.libsodium.org/libsodium/releases/libsodium-1.0.18.tar.gz | tar -xz
+cd /tmp/libsodium-1.0.18 
+./configure --disable-shared
+sudo make
+sudo make install 
+```
+
+ - optional
+
+```cmd
+cd ..
+sudo rm -rf /tmp/libsodium-1.0.18
+```
+
+4. Build libindy
+
+```cmd
+cd [indy_sdk]/libindy/
+cargo build
+cd target/debug
+sudo cp libindy.so /usr/local/lib/
+sudo ldconfig
+```
+
+5. Test
+
+```cmd
+cd [indy_sdk]/samples/python
+sudo apt-get install python3-pip
+pip3 install python3-indy
+python3 -m src.getting_started
+```
