@@ -8,7 +8,7 @@
 
 ### * Overall
 
-![](./Background/img/DID_Flow.png)
+![](./Background/img/Overall.png)
 
 ### * Indy Node
 
