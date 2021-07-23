@@ -153,7 +153,7 @@ https://forge.rust-lang.org/infra/other-installation-methods.html
 curl https://sh.rustup.rs -sSf | sh
 rustc --version
 ```
-```
+```cmd
 rustup toolchain install 1.51.0
 ```
 
