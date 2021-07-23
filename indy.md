@@ -1,5 +1,27 @@
 # NodeJS samples for Indy SDK
 
+## - outline
+
+### * DID Flow
+
+![](./Background/img/DID_Flow.png)
+
+### * Overall
+
+![](./Background/img/DID_Flow.png)
+
+### * Indy Node
+
+![](./Background/img/indy-node_basic.png)
+
+### * Indy plenum
+
+![](./Background/img/indy-plenum_basic.png)
+
+### * Indy SDK
+
+![](./Background/img/indy-sdk_basic.png)
+
 ## - demo
 
 ```cmd
