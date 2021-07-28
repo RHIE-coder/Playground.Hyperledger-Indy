@@ -1,4 +1,4 @@
-# NodeJS samples for Indy SDK
+# Hyperledger Indy Intro
 
 ## - outline
 
@@ -21,6 +21,18 @@
 ### * Indy SDK
 
 ![](./Background/img/indy-sdk_basic.png)
+
+<br><br><hr><br><br>
+
+# Sample
+
+
+
+<br><br><br><br><br>
+<hr><hr><hr><hr><hr>
+<br><br><br><br><br>
+
+# ... need monitoring ...
 
 ## - demo
 
@@ -98,14 +110,36 @@ Although we don't talk about them in the demo overview, there are two additional
  - 3001 for Bob
  - 3004 for Thrift Bank
 
-
-## ...ing
+## indy-sdk node.js sample
 
 https://github.com/hyperledger/indy-sdk/tree/master/samples/nodejs
 
+8버전이 아니면 node-gyp rebuild 에러가 난다.
+
+다운그레이드 시켜주자
+
+ - node 8.17.0
+ - npm 6.13.4
+
+
 ```cmd
-LD_LIBRARY_PATH=/usr/local/lib/libindy.so
+. ~/.bashrc
 cd [indy_sdk]/samples/nodejs
+```
+```cmd
+sudo npm install -g n
+sudo n install 8.17.0
+//n을 적용하면서 최신버전이 안보인다..
+//최신 LTS버전도 같이 설치해주자.
+sudo n install 14.17.3
+```
+```cmd
+//최신 버전을 설치하니 npm 버전이 적용이 안된다.
+//원래 설치되어 있는 /usr/bin/의 nodejs를 삭제해주자
+sudo apt-get purge --auto-remove nodejs
+sudo n //8버전 선택
+node -v
+npm -v
 npm install
 npm run start
 ```

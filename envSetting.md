@@ -139,7 +139,7 @@ https://github.com/hyperledger/indy-sdk/blob/master/README.md#how-to-start-local
 
 ```cmd
 docker build -f ci/indy-pool.dockerfile -t indy_pool .
-docker run -itd -p 9701-9708:9701-9708 indy_pool
+docker run --name indy_pool -itd -p 9701-9708:9701-9708 indy_pool
 ```
 
 #### Indy SDK 빌드하기 (`libindy.so`)
@@ -197,6 +197,17 @@ cd target/debug
 sudo cp libindy.so /usr/local/lib/
 sudo ldconfig
 ```
+
+vi 에 다음을 추가
+```
+LD_LIBRARY_PATH=/usr/local/lib/libindy.so
+```
+
+환경변수 적용
+```cmd
+. ~/.bashrc
+```
+
 
 5. Test
 
