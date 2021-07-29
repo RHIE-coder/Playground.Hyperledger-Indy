@@ -1,96 +1,4 @@
-# Hyperledger Indy Intro
-
-## - outline
-
-### * DID Flow
-
-![](./Background/img/DID_Flow.png)
-
-### * Overall
-
-![](./Background/img/Overall.png)
-
-### * Indy Node
-
-![](./Background/img/indy-node_basic.png)
-
-### * Indy plenum
-
-![](./Background/img/indy-plenum_basic.png)
-
-### * Indy SDK
-
-![](./Background/img/indy-sdk_basic.png)
-
-<br><br><hr><br><br>
-
-# Sample
-
-
-
-# Refernece
-
-https://hyperledger-indy.readthedocs.io/projects/node/en/latest/transactions.html
-
-https://github.com/hyperledger/indy-node/blob/master/docs/source/auth_rules.md
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br><br><br><br><br>
-<hr><hr><hr><hr><hr>
-<br><br><br><br><br>
-
-# ... need monitoring ...
-
-## - demo
+# DEMO
 
 ```cmd
 git clone https://github.com/hyperledger-archives/education indy-demo
@@ -166,7 +74,9 @@ Although we don't talk about them in the demo overview, there are two additional
  - 3001 for Bob
  - 3004 for Thrift Bank
 
-## indy-sdk node.js sample
+<br><br><br><br><br><br>
+
+# indy-sdk node.js sample
 
 https://github.com/hyperledger/indy-sdk/tree/master/samples/nodejs
 

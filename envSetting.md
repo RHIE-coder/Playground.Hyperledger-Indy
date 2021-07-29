@@ -18,7 +18,7 @@
 
 ## 🌈Reference Document
 
-[Hyperledger Indy]()
+[Hyperledger Indy](https://github.com/hyperledger/indy-sdk)
 
 ## 🌈Start Setting
 
@@ -96,9 +96,9 @@ wget --version
 ```
 
 #### docker
-[how to install](./background/docker/docker(install).md)
+[how to install](./background/docker(install).md)
 
-[how to use](./background/docker/docker(usage).md)
+[how to use](./background/docker(usage).md)
 
 
 #### [node.js SDK] Python 2.7버전 있는지 확인
