@@ -17,7 +17,7 @@
 
 ![](./background/img/DID_Flow.png)
 
-#### DID에 대한 더 자세한 정보: [PPT 다운로드](/home/rmh/indy-home/study/background/what_is_did.pptx)
+#### DID에 대한 더 자세한 정보: [PPT 다운로드](./background/what_is_did.pptx)
 
 ### * Overall
 
