@@ -39,7 +39,6 @@
 <hr>
 <br>
 
-
 ## 3. 시나리오 기반 이해
 
 <br>
@@ -52,5 +51,5 @@
 
 ![](./background/img/pysample/gs_util_python.png)
 
-### * [주피터 살펴보기](./sample/python/scenario/indy_flow.ipynb)
+### * [주피터 살펴보기](./sample/python/scenario/indy_scenario.ipynb)
 
