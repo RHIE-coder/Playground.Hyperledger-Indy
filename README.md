@@ -27,6 +27,9 @@
 
 ![](./background/img/indy-node_basic.png)
 
+
+#### [indy-node issue](https://jira.hyperledger.org/projects/INDY/issues/INDY-2033?filter=allopenissues)
+
 ### * Indy plenum
 
 ![](./background/img/indy-plenum_basic.png)
@@ -38,6 +41,7 @@
 <br>
 <hr>
 <br>
+
 
 ## 3. 시나리오 기반 이해
 
@@ -52,4 +56,3 @@
 ![](./background/img/pysample/gs_util_python.png)
 
 ### * [주피터 살펴보기](./sample/python/scenario/indy_scenario.ipynb)
-
