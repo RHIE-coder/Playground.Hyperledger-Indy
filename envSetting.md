@@ -8,9 +8,22 @@
 
 [Download VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
-## 🌈Putty
+## 🌈Putty or WSL2
 
 [Download Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+
+ - how to download `WSL2`
+ 
+```
+[Powershell 관리자모드로 실행]
+wsl --install
+[컴퓨터 재부팅]
+[Microsoft Store에서 Windows Terminal 설치]
+wsl
+sudo apt-get update
+sudo apt-get install wget ca-certificates
+logout
+```
 
 ## 🌈Visual Studio Code
 
@@ -23,9 +36,11 @@
 ## 🌈Start Setting
 
 ### 🍀원격 환경
+
 1. VirtualBox에 Ubuntu설치하기
 2. VirtualBox 게스트 확장과 한글 입력 셋팅해보기[Shift+Space]
-3. putty로 리눅스 접속
+3. putty 혹은 WSL2로 리눅스 접속
+
  - 리눅스에 `openssh-server` 설치
 ```shell
 sudo apt-get install openssh-server
@@ -101,11 +116,18 @@ wget --version
 [how to use](./background/docker(usage).md)
 
 
+`Get Permission`을 하기 위해 리눅스 재부팅
+
 #### [node.js SDK] Python 2.7버전 있는지 확인
 ```
 python --version
 ```
-리눅스 Ubuntu 18.04는 기본적으로 깔려 있을 있을 것
+
+만일 깔려있지 않다면 아래 명령어 실행
+
+```
+sudo apt install python
+```
 
 #### [node.js SDK] Node.js 설치
 PPA를 통해 최신버전 가져오기(14버전) LTS
@@ -126,16 +148,27 @@ NPM의 제 기능을 위해 부가설치(npm install 에러 방지)
 sudo apt-get install build-essential
 ```
 
+#### 파이썬 업그레이드 to 3.8
+
+```
+sudo apt install python3.8 -y
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 1 
+python3 -V
+<!-- sudo update-alternatives --config python3 -->
+```
+
+
 ### 🍀Hyperledger Indy
 
 #### Indy SDK Repository 가져오기
 
 ```cmd
-https://github.com/hyperledger/indy-sdk
+git clone https://github.com/hyperledger/indy-sdk
 ```
 
 #### Indy 노드풀 실행
-https://github.com/hyperledger/indy-sdk/blob/master/README.md#how-to-start-local-nodes-pool-with-docker
+
+[참고](https://github.com/hyperledger/indy-sdk/blob/master/README.md#how-to-start-local-nodes-pool-with-docker)
 
 ```cmd
 docker build -f ci/indy-pool.dockerfile -t indy_pool .
@@ -143,7 +176,7 @@ docker run --name indy_pool -itd -p 9701-9708:9701-9708 indy_pool
 ```
 
 #### Indy SDK 빌드하기 (`libindy.so`)
-https://github.com/hyperledger/indy-sdk/blob/master/docs/build-guides/ubuntu-build.md
+[참고](https://github.com/hyperledger/indy-sdk/blob/master/docs/build-guides/ubuntu-build.md)
 
 1. Install Rust and rustup
 
@@ -151,6 +184,7 @@ https://forge.rust-lang.org/infra/other-installation-methods.html
 
 ```cmd
 curl https://sh.rustup.rs -sSf | sh
+. ~/.bashrc
 rustc --version
 ```
 ```cmd
@@ -198,8 +232,9 @@ sudo cp libindy.so /usr/local/lib/
 sudo ldconfig
 ```
 
-vi 에 다음을 추가
+`.bashrc` 에 다음을 추가
 ```
+vi ~/.bashrc
 LD_LIBRARY_PATH=/usr/local/lib/libindy.so
 ```
 
@@ -211,6 +246,8 @@ LD_LIBRARY_PATH=/usr/local/lib/libindy.so
 
 5. Test
 
+ 
+ - `Getting Started` 실행
 ```cmd
 cd [indy_sdk]/samples/python
 sudo apt-get install python3-pip
