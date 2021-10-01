@@ -11,6 +11,9 @@ docker logs hello
 docker push rhie/hello-world
 docker tag hello-world rhie/hello-world
 docker rmi rhie/hello-world
+
+docker rm -f $(docker ps -aq)
+docker rmi $(docker images -q) 
 ```
 
 ```

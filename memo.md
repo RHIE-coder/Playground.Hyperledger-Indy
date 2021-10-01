@@ -1,3 +1,22 @@
+# Ah-hah
+
+Sovrin Foundation은 비영리 단체
+
+Sovrin은 블록체인 스타트업 기업인 Evernym이 기원임
+
+Indy는 Evernym으로 개발됨
+
+Evernym은 2013년 설립된 블록체인 신원인증 솔루션 스타트업으로 미국 영국 기반의 회사이며 미국 국토안보부의 지원을 받음.
+
+Sovrin Foundation에 소속되어 있음
+
+
+
+
+<br><br><br><br>
+<hr>
+<br><br><br><br>
+
 # DEMO
 
 ```cmd
