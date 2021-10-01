@@ -172,6 +172,7 @@ git clone https://github.com/hyperledger/indy-sdk
 [참고](https://github.com/hyperledger/indy-sdk/blob/master/README.md#how-to-start-local-nodes-pool-with-docker)
 
 ```cmd
+cd indy-sdk
 docker build -f ci/indy-pool.dockerfile -t indy_pool .
 docker run --name indy_pool -itd -p 9701-9708:9701-9708 indy_pool
 ```
