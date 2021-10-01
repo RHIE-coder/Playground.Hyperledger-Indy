@@ -155,8 +155,9 @@ sudo apt install python3.8 -y
 sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 1 
 python3 -V
 <!-- sudo update-alternatives --config python3 -->
+python3 -m pip install pip
+pip3 -V
 ```
-
 
 ### 🍀Hyperledger Indy
 
