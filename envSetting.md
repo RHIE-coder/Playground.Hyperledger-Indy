@@ -37,9 +37,9 @@ logout
 
 ### 🍀원격 환경
 
-1. VirtualBox에 Ubuntu설치하기
-2. VirtualBox 게스트 확장과 한글 입력 셋팅해보기[Shift+Space]
-3. putty 혹은 WSL2로 리눅스 접속
+#### 1. VirtualBox에 Ubuntu설치하기
+#### 2. VirtualBox 게스트 확장과 한글 입력 셋팅해보기[Shift+Space]
+#### 3. putty 혹은 WSL2로 리눅스 접속
 
  - 리눅스에 `openssh-server` 설치
 ```shell
@@ -54,14 +54,19 @@ sudo service sshd status
 
  - VirtualBox에 포트포워딩하기
 
-#### 게스트OS IP확인
+<br><br>
+
+#### - 게스트OS IP확인
 ```shell
 sudo apt install net-tools
 ```
 ```shell
 ifconfig
 ```
-#### 호스트OS IP확인
+
+<br><br>
+
+#### - 호스트OS IP확인
 window cmd
 ```cmd
 ipconfig
@@ -69,7 +74,9 @@ ipconfig
 
  - Putty로 접속
 
-4. VSCode로 리눅스 접속
+<br><br>
+
+#### 4. VSCode로 리눅스 접속
 
  - 확장 프로그램 설치
     - Remote - SSH
@@ -148,16 +155,7 @@ NPM의 제 기능을 위해 부가설치(npm install 에러 방지)
 sudo apt-get install build-essential
 ```
 
-#### 파이썬 업그레이드 to 3.8
 
-```
-sudo apt install python3.8 -y
-sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 1 
-python3 -V
-<!-- sudo update-alternatives --config python3 -->
-python3 -m pip install pip
-pip3 -V
-```
 
 ### 🍀Hyperledger Indy
 
