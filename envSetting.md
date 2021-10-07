@@ -194,20 +194,45 @@ rustup toolchain install 1.51.0
 2. Install required native libraries and utilities:
 
 ```cmd
-sudo apt-get update && \
+sudo apt-get update
+```
+```cmd
 sudo apt-get install -y \
    build-essential \
    pkg-config \
    cmake \
    libssl-dev \
    libsqlite3-dev \
-   libzmq3-dev
+   libzmq3-dev \
    libncursesw5-dev
 ```
+만일 위 명령어가 실패하면 아래 처럼 하나씩 실행하자
+```cmd
+sudo apt-get install -y build-essential
+```
+```cmd
+sudo apt-get install -y pkg-config
+```
+```cmd
+sudo apt-get install -y cmake
+```
+```cmd
+sudo apt-get install -y libssl-dev
+```
+```cmd
+sudo apt-get install -y libsqlite3-dev
+```
+```cmd
+sudo apt-get install -y libzmq3-dev
+```
+```cmd
+sudo apt-get install -y libncursesw5-dev
+```
+
 3. libindy requires the modern 1.0.14 version of libsodium but Ubuntu 16.04 does not support installation it's from apt repository. Because of this, it requires to build and install libsodium from source:
 
 ```cmd
-cd /tmp 
+cd /tmp
 curl https://download.libsodium.org/libsodium/releases/libsodium-1.0.18.tar.gz | tar -xz
 cd /tmp/libsodium-1.0.18 
 ./configure --disable-shared
@@ -251,6 +276,9 @@ LD_LIBRARY_PATH=/usr/local/lib/libindy.so
 ```cmd
 cd [indy_sdk]/samples/python
 sudo apt-get install python3-pip
+sudo pip3 install pip --upgrade
+pip -V
+pip3 -V
 pip3 install python3-indy
 python3 -m src.getting_started
 ```
