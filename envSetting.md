@@ -282,3 +282,35 @@ pip3 -V
 pip3 install python3-indy
 python3 -m src.getting_started
 ```
+
+### 🍀Indy CLI ( for Indy-SDK )
+
+https://github.com/hyperledger/indy-sdk/tree/master/cli
+
+https://github.com/hyperledger/indy-sdk/tree/master/docs/design/001-cli
+
+
+```cmd
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CE7709D068DB5E88
+sudo add-apt-repository "deb https://repo.sovrin.org/sdk/deb bionic stable"
+sudo apt-get update
+sudo apt-get install -y indy-cli
+```
+
+(xenial|bionic) xenial for 16.04 Ubuntu and bionic for 18.04 Ubuntu.
+{release channel} must be replaced with master, rc or stable to define corresponded release channel.
+ - master - development builds for each push to master branch.
+ - rc - release candidates.
+ - stable - stable releases.
+```
+sudo add-apt-repository "deb https://repo.sovrin.org/sdk/deb (xenial|bionic) {release channel}"
+```
+
+#### - sample
+
+```
+wallet create wallet1 key storage_type=default
+wallet open wallet1 key
+did new
+did list
+```
