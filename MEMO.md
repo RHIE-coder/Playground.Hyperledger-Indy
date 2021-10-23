@@ -12,10 +12,18 @@ Sovrin Foundation에 소속되어 있음
 
 
 
+<br><br><br><br>
+<hr>
+
+# TASK!
+
+
+## 1. 지갑 decrypt하기
+## 2. 지갑에 Private Key 얻어오기
+
 
 <br><br><br><br>
 <hr>
-<br><br><br><br>
 
 # DEMO
 
