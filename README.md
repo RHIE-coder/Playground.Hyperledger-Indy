@@ -2,7 +2,7 @@
 
 <br>
 
-## [1. 환경 셋팅](./envSetting.md)
+## [1. 환경 셋팅](./md/EnvSetting.md)
 
 <br>
 <br>
@@ -56,3 +56,5 @@
 ![](./background/img/pysample/gs_util_python.png)
 
 ### * [주피터 살펴보기](./sample/python/scenario/indy_scenario.ipynb)
+
+### * [모듈 분석](./md/IndyAnalyze.md)
