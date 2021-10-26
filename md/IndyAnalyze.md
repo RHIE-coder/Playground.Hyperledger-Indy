@@ -24,12 +24,21 @@
 16. ledger.sign_and_submit_request
 
 17. anoncreds.issuer_create_and_store_revoc_reg
-18. 
-19. 
-20. 
-21. 
+18. blob_storage.open_writer (save tails)
+19. anoncreds.issuer_create_and_store_revoc_reg
+20. ledger.sign_and_submit_request
 
+21. ledger.build_revoc_reg_def_request
+22. ledger.build_revoc_reg_entry_request
+23. ledger.sign_and_submit_request
 
+24. anoncreds.issuer_create_credential_offer
+25. prover_create_master_secret
+26. 
+27. 
+28. 
+29. 
+30. 
 ```
 # 환경셋팅 명령
 
