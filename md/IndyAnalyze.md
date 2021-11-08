@@ -1,17 +1,21 @@
 # 과정
 
 ```
+[---pool 생성과 오픈---]
 01. pool.set_protocol_version
 02. pool.create_pool_ledger_config
 03. pool.open_pool_ledger
 
+[---wallet & did 생성과 오픈---]
 04. wallet.create_wallet
 05. wallet.open_wallet
 06. did.create_and_store_my_did
 
+[---Endorser 등록---]
 07. ledger.build_nym_request
 08. ledger.sign_and_submit_request
 
+[---Schema 등록---]
 09. anoncreds.issuer_create_schema
 10. ledger.sign_and_submit_request
 
