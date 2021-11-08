@@ -118,9 +118,9 @@ wget --version
 ```
 
 #### docker
-[how to install](./background/docker(install).md)
+[how to install](./background/docker-install.md)
 
-[how to use](./background/docker(usage).md)
+[how to use](./background/docker-usage.md)
 
 
 `Get Permission`을 하기 위해 리눅스 재부팅
@@ -289,6 +289,7 @@ https://github.com/hyperledger/indy-sdk/tree/master/cli
 
 https://github.com/hyperledger/indy-sdk/tree/master/docs/design/001-cli
 
+[link](https://hyperledger-indy.readthedocs.io/projects/sdk/en/latest/docs/design/001-cli/README.html)
 
 ```cmd
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CE7709D068DB5E88
