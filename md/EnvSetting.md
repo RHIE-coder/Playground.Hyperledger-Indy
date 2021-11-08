@@ -118,9 +118,9 @@ wget --version
 ```
 
 #### docker
-[how to install](./background/docker-install.md)
+[how to install](../background/docker-install.md)
 
-[how to use](./background/docker-usage.md)
+[how to use](../background/docker-usage.md)
 
 
 `Get Permission`을 하기 위해 리눅스 재부팅
