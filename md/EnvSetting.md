@@ -322,5 +322,5 @@ did list
 ```cmd
 git clone https://github.com/bcgov/von-network
 ./manage build
-./manage start
+./manage start "LEDGER_INSTANCE_NAME=Ajou Self-Sovereign"
 ```
